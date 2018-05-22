@@ -1,5 +1,7 @@
 package com.web.curd.model;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -27,8 +29,8 @@ public class Student {
 	@Column(name="CONT_NUMBER")
 	private String contNumber;
 	@Column(name="ADMISSION_DATE")
-	@Temporal(TemporalType.TIMESTAMP)
-	private String admissionDate;
+	@Temporal(TemporalType.DATE)
+	private Date  AdmissionDate;
 	public Long getStudentId() {
 		return studentId;
 	}
@@ -59,11 +61,11 @@ public class Student {
 	public void setContNumber(String contNumber) {
 		this.contNumber = contNumber;
 	}
-	public String getAdmissionDate() {
-		return admissionDate;
+	public Date getAdmissionDate() {
+		return AdmissionDate;
 	}
-	public void setAdmissionDate(String admissionDate) {
-		this.admissionDate = admissionDate;
+	public void setAdmissionDate(Date admissionDate) {
+		this.AdmissionDate = admissionDate;
 	}
 	public Student(Long studentId) {
 		super();
